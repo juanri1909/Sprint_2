@@ -1,0 +1,113 @@
+db.dropDatabase()
+use pizzeria
+db.productos.insert({
+	id_producto:1,
+	nombre: "bebida",
+	descripcion: "cocacola sin azucar",
+	imagen: "producto1.img",
+	precio: 1,
+})
+
+db.productos.insert({
+	id_producto:2,
+	nombre:"Pizza",
+	descripcion: "pizza vegetariana",
+	imagen: "producto2.img",
+	precio: 10,
+	categoria: 1
+})
+
+db.productos.insert({
+	id_producto:3,
+	nombre:"Pizza",
+	descripcion: "pizza mexicana",
+	imagen: "producto3.img",
+	precio: 15,
+	categoria:2,
+})
+db.productos.insert({
+	id_producto:4,
+	nombre:"Hamburguesa",
+	descripcion: "Hamburguesa de pollo",
+	imagen: "producto4.img",
+	precio: 150,
+})
+
+db.pedido.insert({
+	id_pedido:1,
+	fecha:"23-03-2022",
+	hora:"15:00",
+	tipo_reparto: "domicilio",
+	total: 20,
+	id_cliente: 1,
+	id_tienda: 1,
+	id_empleado: 1,
+})
+
+db.pedido.insert({
+	id_pedido:2,
+	fecha:"23-02-2022",
+	hora:"19:00",
+	tipo_reparto: "domicilio",
+	total: 50,
+	id_cliente: 1,
+	id_tienda: 2,
+	id_empleado: 1,
+})
+
+
+db.tienda.insert({
+	id_tienda:1,
+	direccion:"calle valencia, 1",
+	cp: 08022,
+	localidad: "barcelona",
+	provincia: "barcelona",
+})
+
+db.tienda.insert({
+	id_tienda:2,
+	direccion:"Rambla Poblenou, 1",
+	cp: 08019,
+	localidad: "barcelona",
+	provincia: "barcelona",
+})
+
+db.cliente.insert({
+	id_cliente:1,
+	nombre: "cliente_1",
+	apellidos: "ApeCliente1",
+	direccion: "Calle Cifuentes, 22",
+	cp: 08009,
+	localidad: "barcelona",
+	provincia: "barcelona",
+	telefono: 111111111,
+})
+
+db.empleado.insert({
+	id_empleado: 1,
+	nombre: "empleado_1",
+	ape: "apellido_1",
+	nif: "111222333E",
+	tf: 932343456,
+	profesion: "repartidor",
+	id_tienda: 1,
+})
+
+db.empleado.insert({
+	id_empleado: 2,
+	nombre: "empleado_2",
+	ape: "apellido_2",
+	nif: "1112224444E",
+	tf: 932343423,
+	profesion: "cocinero",
+	id_tienda: 2,
+})
+
+db.contiene.insert({
+	id_pedido: 1,
+	id_producto: 1,
+	cantidad: 3,
+})
+
+	
+

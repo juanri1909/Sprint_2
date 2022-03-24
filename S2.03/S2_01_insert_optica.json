@@ -1,0 +1,185 @@
+db.dropDatabase()
+use optica1
+db.clientes.insert({
+	id: 1,
+	nombre: "Cliente_1",
+	direccion:"Plaza Tetuan",
+	telefono: 653579013,
+	email:"cliente_1@gmail.com",
+	fechareg:"14-01-2021",
+	id_cliente_recomendado:4
+})
+
+db.clientes.insert({
+	id: 2,
+	nombre: "cliente_2",
+	direccion:"Plaza Girasoles",
+	telefono: 653579031,
+	email:"cliente_2@gmail.com",
+	fechareg:"14-01-2021"
+})
+
+db.clientes.insert({
+	id: 3,
+	nombre: "Cliente_3",
+	direccion:"Arc de Triunfo",
+	telefono: 653579031,
+	email:"cliente_3@gmail.com",
+	fechareg:"15-01-2021",
+	id_cliente_recomendado: 1
+})
+db.clientes.insert({
+	id: 4,
+	nombre: "Cliente_4",
+	direccion:"Plaza Girasoles",
+	telefono: 653579031,
+	email:"cliente_4@gmail.com",
+	fechareg:"14-01-2021",
+})
+
+db.proveedores.insert({
+	id_Proveedor:1,
+	nombre: "Proveedor_1",
+	direccion:{
+		 calle:"Tirso de Molina",
+		 numero: 4,
+		 piso:3,
+		 puerta:"4A",
+		 ciudad:"Madrid",
+		 cp: 28022,
+		 pais:"España",
+	},
+	telefono:111111111,
+	fax:111111111,
+	nif:"B.25679078",
+	gafas:[1,2,4],
+})
+
+db.proveedores.insert({
+	id_Proveedor:2,
+	nombre: "Proveedor_2",
+	direccion:{
+		 calle:"Bilbao",
+		 numero: 14,
+		 piso:3,
+		 puerta:"5A",
+		 ciudad:"Barceloa",
+		 cp: 08018,
+		 pais:"España",
+	},
+	telefono:222222222,
+	fax:222222222,
+	nif:"B.256790234",
+	gafas:[3],
+})
+
+db.proveedores.insert({
+	id_Proveedor:3,
+	nombre: "Proveedor_3",
+	direccion:{
+		 calle:"Sarria",
+		 numero: 4,
+		 piso:3,
+		 puerta:"4A",
+		 ciudad:"Barcelona",
+		 cp: 08022,
+		 pais:"España",
+	},
+	telefono:333333333,
+	fax:3333333,
+	nif:"B.3245678",
+	gafas:[5],
+})
+
+db.ulleres.insert({
+	id_Ulleres:1,
+	marca:"Rayban",
+	graduacion:[0.2, 0.4],
+	tipo_montura: "flotante",
+	color:{
+		montura: "negra",
+		vidrio: "transparente"
+	},
+	precio: 110,
+	
+})
+db.ulleres.insert({
+	id_Ulleres:2,
+	marca:"Guzzi",
+	graduacion:[0.2, 0.4],
+	tipo_montura: "pasta",
+	color:{
+		montura: "negra",
+		vidrio: "transparente"
+	},
+	precio: 120,
+})
+db.ulleres.insert({
+	id_Ulleres:3,
+	marca:"Afeliou",
+	graduacion:[0.5, 1.4],
+	tipo_montura: "metalicas",
+	color:{
+		montura: "bicolor",
+		vidrio: "oscuro"
+	},
+	precio: 100,
+})
+db.ulleres.insert({
+	id_Ulleres:4,
+	marca:"Rayban",
+	graduacion:[0.2, 0.4],
+	tipo_montura: "flotante",
+	color:{
+		montura: "negra",
+		vidrio: "transparente"
+	},
+	precio: 200,
+})
+db.ulleres.insert({
+	id_Ulleres:5,
+	marca:"Police",
+	graduacion:[0.2, 0.4],
+	tipo_montura: "flotante",
+	color:{
+		montura: "negra",
+		vidrio: "oscuras"
+	},
+	precio: 90,
+})
+
+
+
+
+db.compran.insert({
+	id_proveedor:1,
+	id_ulleres:1,
+	id_cliente:1,
+	id_vendedor:1,
+})
+
+db.compran.insert({
+	id_proveedor:1,
+	id_ulleres:2,
+	id_cliente:2,
+	id_vendedor:1,
+})
+
+db.compran.insert({
+	id_proveedor:1,
+	id_ulleres:1,
+	id_cliente:3,
+	id_vendedor:1
+})
+
+
+
+
+		
+		
+		
+	
+
+
+
+
